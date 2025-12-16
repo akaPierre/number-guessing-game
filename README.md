@@ -1,5 +1,11 @@
 # 🎯 Number Guessing Game (JavaFX + Maven)
 
+![Java](https://img.shields.io/badge/Java-25+-orange?style=for-the-badge&logo=openjdk)
+![JavaFX](https://img.shields.io/badge/JavaFX-25-blue?style=for-the-badge)
+![Maven](https://img.shields.io/badge/Maven-3.8+-C71A36?style=for-the-badge&logo=apachemaven)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/akaPierre/number-guessing-game?style=for-the-badge)
+
 A clean and beginner‑friendly **Number Guessing Game** built with **Java**, **JavaFX**, and **Maven**.
 
 The goal is simple: the game randomly generates a secret number, and the player must guess it within a limited number of attempts. Feedback is provided after every guess, making it easy and fun to play.
@@ -145,7 +151,6 @@ Until a license is added, the project is technically **"All Rights Reserved"** b
 
 ## 🚀 Future Improvements (Ideas)
 
-- Add a "Play Again" button
 - Persist statistics using a file or database
 - Add sound effects or animations
 - Add a timer‑based challenge mode
