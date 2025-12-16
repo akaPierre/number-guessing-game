@@ -1,95 +1,163 @@
-# Number Guessing Game (JavaFX + Maven)
+# 🎯 Number Guessing Game (JavaFX + Maven)
 
-A simple Number Guessing Game built with Java, JavaFX, and Maven.  
-The player tries to guess a randomly generated secret number within a limited number of attempts.
+A clean and beginner‑friendly **Number Guessing Game** built with **Java**, **JavaFX**, and **Maven**.
 
-## Features
+The goal is simple: the game randomly generates a secret number, and the player must guess it within a limited number of attempts. Feedback is provided after every guess, making it easy and fun to play.
 
-- GUI built with JavaFX (no console).
+This project is ideal for:
+- Learning JavaFX basics
+- Practicing GUI logic and input validation
+- Understanding Maven project structure
+- Showcasing a simple desktop app on GitHub
+
+---
+
+## ✨ Features
+
+- Fully graphical interface (JavaFX — no console interaction)
 - Three difficulty levels:
-    - Easy: 1–50, 8 attempts
-    - Normal: 1–100, 10 attempts
-    - Hard: 1–500, 12 attempts
-- Visual feedback for:
-    - Too high / too low guesses
-    - Invalid input or out-of-range values
-    - Game Over (out of attempts)
-    - Success (correct guess)
-- Simple stats (per session, in memory):
-    - Total games played
-    - Total wins
-    - Best game (fewest attempts for a correct guess)
+  - **Easy**: numbers from **1–50**, **8 attempts**
+  - **Normal**: numbers from **1–100**, **10 attempts**
+  - **Hard**: numbers from **1–500**, **12 attempts**
+- Clear visual feedback for:
+  - Guess is too high or too low
+  - Invalid or out‑of‑range input
+  - Game over (no attempts left)
+  - Winning the game 🎉
+- Simple session statistics (in memory):
+  - Total games played
+  - Total wins
+  - Best game (fewest attempts to win)
 
-## Requirements
+---
 
-- JDK 25 (or compatible) installed and on `PATH`.
-- Maven 3.8+ installed.
-- JavaFX SDK 25.x downloaded separately (JavaFX is no longer bundled with the JDK).  
-  You can download it from the official OpenJFX site: https://openjfx.io [web:4][web:24]
+## 🛠️ Tech Stack
 
-## Project Structure
+- **Java** (JDK 21+ recommended, tested with JDK 25)
+- **JavaFX** (SDK 25.x)
+- **Maven** (3.8+)
+- **JUnit** (basic testing structure included)
 
+---
+
+## 📋 Requirements
+
+Before running the project, make sure you have:
+
+- Java JDK installed and available on your `PATH`
+- Maven installed (`mvn -v` should work)
+- JavaFX SDK downloaded separately (JavaFX is no longer bundled with the JDK)
+
+👉 Download JavaFX from: https://openjfx.io
+
+---
+
+## 📁 Project Structure
+
+```
 number-guessing-game/
 ├── pom.xml
 ├── README.md
-├── javafx-sdk-25.0.1/ # JavaFX SDK (not committed if you prefer)
 ├── src/
-│ ├── main/
-│ │ └── java/
-│ │ └── com/
-│ │ └── games/
-│ │ └── NumberGuessingGameApp.java
-│ └── test/
-│ └── java/
-│ └── com/
-│ └── games/
-│ └── NumberGuessingGameAppTest.java
+│   ├── main/
+│   │   └── java/
+│   │       └── com/games/
+│   │           └── NumberGuessingGameApp.java
+│   └── test/
+│       └── java/
+│           └── com/games/
+│               └── NumberGuessingGameAppTest.java
 └── target/
+```
 
+> ⚠️ The JavaFX SDK folder is **not** committed to the repository and should be downloaded locally.
 
-## Running the Game (Development)
+---
 
-The easiest way to run the game during development is via the JavaFX Maven plugin:
+## ▶️ Running the Game (Development)
 
+The easiest way to run the game during development is using the JavaFX Maven plugin:
+
+```bash
 mvn javafx:run
+```
 
+This uses the configuration defined in `pom.xml` to launch the application.
 
-This uses the configuration in `pom.xml` to launch the JavaFX application. [web:4][web:17]
+---
 
-## Building and Running the JAR
+## 📦 Building and Running the JAR
 
-1. Build the project:
+### 1️⃣ Build the project
 
+```bash
 mvn clean package
+```
 
+This will generate the JAR file:
 
-This will generate `target/number-guessing-game-1.0-SNAPSHOT.jar`.
+```
+target/number-guessing-game-1.0-SNAPSHOT.jar
+```
 
-2. Ensure you have the JavaFX SDK extracted, for example in:
+---
 
-javafx-sdk-25.0.1/
-└── lib/
-├── javafx-controls.jar
-├── javafx-fxml.jar
-└── ...
+### 2️⃣ Run the JAR with JavaFX
 
+Since JavaFX is external, you must provide its modules at runtime.
 
-3. Run the JAR with the JavaFX modules on the module path (Windows example):
+**Windows example:**
 
-java --module-path ".\javafx-sdk-25.0.1\lib" --add-modules javafx.controls,javafx.fxml -jar .\target\number-guessing-game-1.0-SNAPSHOT.jar
+```bash
+java --module-path ".\javafx-sdk-25.0.1\lib" \
+     --add-modules javafx.controls,javafx.fxml \
+     -jar .\target\number-guessing-game-1.0-SNAPSHOT.jar
+```
 
+Adjust the JavaFX SDK path if it is located elsewhere or if you are on Linux/macOS.
 
-Adjust the `javafx-sdk` path if you keep it elsewhere. [web:4][web:35]
+---
 
-## Notes
+## 📝 Notes
 
-- The JavaFX SDK directory is typically not committed to version control.  
-  You can:
-    - Add it to `.gitignore`, and
-    - Document the download location/path in this README (already done).
-- You can tweak the difficulty ranges and attempt limits inside `NumberGuessingGameApp.java`.
+- The JavaFX SDK directory should be added to `.gitignore`
+- Difficulty ranges and attempt limits can be easily adjusted in:
+  - `NumberGuessingGameApp.java`
+- Statistics are stored **in memory only** and reset when the app closes
 
-## License
+---
 
-Choose a license you prefer (for example MIT, Apache-2.0, or GPL) and add a `LICENSE` file.  
-Until then, this project can be considered “all rights reserved” by default. [web:7]
+## 📄 License
+
+If you are unsure which license to use, **MIT License** is a great default choice:
+
+- Allows others to use, modify, and share your code
+- Requires only attribution
+- Widely used for open‑source projects
+
+### Recommended setup:
+1. Create a file named `LICENSE` in the project root
+2. Choose **MIT License** on GitHub when adding it
+
+Until a license is added, the project is technically **"All Rights Reserved"** by default.
+
+---
+
+## 🚀 Future Improvements (Ideas)
+
+- Add a "Play Again" button
+- Persist statistics using a file or database
+- Add sound effects or animations
+- Add a timer‑based challenge mode
+
+---
+
+## 👤 Author
+
+**Daniel Pierre Fachini de Toledo**  
+GitHub: https://github.com/akaPierre
+
+---
+
+If you have suggestions or want to extend this project, feel free to fork it or open an issue 🙂
+
