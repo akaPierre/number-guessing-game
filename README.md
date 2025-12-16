@@ -135,17 +135,27 @@ Adjust the JavaFX SDK path if it is located elsewhere or if you are on Linux/mac
 
 ## 📄 License
 
-If you are unsure which license to use, **MIT License** is a great default choice:
+MIT License
 
-- Allows others to use, modify, and share your code
-- Requires only attribution
-- Widely used for open‑source projects
+Copyright (c) 2025 Daniel Pierre Fachini de Toledo
 
-### Recommended setup:
-1. Create a file named `LICENSE` in the project root
-2. Choose **MIT License** on GitHub when adding it
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Until a license is added, the project is technically **"All Rights Reserved"** by default.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ---
 
